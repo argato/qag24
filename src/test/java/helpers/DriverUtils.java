@@ -16,7 +16,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class DriverUtils {
 
     public static String getSessionId() {
-        return ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
+        return ((RemoteWebDriver) getWebDriver()).getSessionId().toString().replace("selenoid", "");
+
     }
 
     public static byte[] getScreenshotAsBytes() {
@@ -39,7 +40,7 @@ public class DriverUtils {
         return null;
     }
 
-    public static String getConsoleLogs() { // todo refactor
+    public static String getConsoleLogs() {
         return String.join("\n", Selenide.getWebDriverLogs(BROWSER));
     }
 }

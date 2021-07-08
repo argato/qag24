@@ -12,14 +12,12 @@ import allure.tag.Microservice;
 import allure.tag.TM4J;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Configuration;
-import config.App;
 import helpers.PopUpHelper;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
-import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -38,8 +36,6 @@ public class SearchTests extends TestBaseUI {
 
   @BeforeEach
   void openPage() {
-    RestAssured.baseURI = App.config.apiUrl();
-    Configuration.baseUrl = App.config.webUrl();
     open(Configuration.baseUrl);
   }
 

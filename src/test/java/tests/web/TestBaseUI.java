@@ -3,11 +3,18 @@ package tests.web;
 import com.codeborne.selenide.Selenide;
 import config.Project;
 import helpers.AllureAttachments;
+import helpers.DriverSettings;
 import helpers.DriverUtils;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import tests.TestBase;
 
 public class TestBaseUI extends TestBase {
+
+  @BeforeEach
+  void setUp() {
+    DriverSettings.configure();
+  }
 
   @AfterEach
   public void addAttachments() {

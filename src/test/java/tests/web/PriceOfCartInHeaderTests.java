@@ -14,18 +14,19 @@ import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
+import config.App;
 import helpers.PopUpHelper;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
+import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
-import tests.TestBase;
 
 
 @Feature("Корзина")
@@ -36,12 +37,15 @@ import tests.TestBase;
 @AutoMember("anovikova")
 @ManualMember("asidorov")
 @Tags({@Tag("smoke"), @Tag("planetazdorovo")})
-public class PriceOfCartInHeaderTests extends TestBase {
+public class PriceOfCartInHeaderTests extends TestBaseUI {
 
   PopUpHelper popUpHelper = new PopUpHelper();
 
   @BeforeEach
   void openPage() {
+
+    RestAssured.baseURI = App.config.apiUrl();
+    Configuration.baseUrl = App.config.webUrl();
     open(Configuration.baseUrl);
   }
 

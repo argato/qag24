@@ -38,7 +38,8 @@ dependencies {
             "org.aeonbits.owner:owner:$ownerVersion",
             "org.assertj:assertj-core:$assertjVersion",
             "org.slf4j:slf4j-simple:1.7.30",
-            "org.junit.jupiter:junit-jupiter:$junitVersion")
+            "io.rest-assured:rest-assured:4.4.0",
+            "org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
 }
 

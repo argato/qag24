@@ -5,6 +5,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 
 import io.qameta.allure.restassured.AllureRestAssured;
+import io.restassured.RestAssured;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,7 +20,7 @@ public class ServiceAPI {
         .when()
         .log().uri()
         .log().body()
-        .get("http://demowebshop.tricentis.com/cart")
+        .get(RestAssured.baseURI + "cart")
         .then()
         .statusCode(200)
         .extract()
@@ -42,7 +43,7 @@ public class ServiceAPI {
         .when()
         .log().uri()
         .log().body()
-        .post("http://demowebshop.tricentis.com/login")
+        .post(RestAssured.baseURI + "login")
         .then()
         .statusCode(302)
         .log().body()
@@ -58,7 +59,7 @@ public class ServiceAPI {
         .when()
         .log().uri()
         .log().body()
-        .post("http://demowebshop.tricentis.com/login")
+        .post(RestAssured.baseURI + "login")
         .then()
         .statusCode(200)
         .extract()
@@ -75,7 +76,7 @@ public class ServiceAPI {
         .when()
         .log().uri()
         .log().body()
-        .post("http://demowebshop.tricentis.com/addproducttocart/details/31/1")
+        .post(RestAssured.baseURI + "addproducttocart/details/31/1")
         .then()
         .statusCode(200)
         .body("success", is(true));
@@ -91,7 +92,7 @@ public class ServiceAPI {
         .when()
         .log().uri()
         .log().body()
-        .post("http://demowebshop.tricentis.com/addproducttocart/details/" + itemNumber + "/1")
+        .post(RestAssured.baseURI + "addproducttocart/details/" + itemNumber + "/1")
         .then()
         .statusCode(200)
         .body("success", is(true))
@@ -107,7 +108,7 @@ public class ServiceAPI {
         .when()
         .log().uri()
         .log().body()
-        .post("http://demowebshop.tricentis.com/addproducttocart/details/31/1")
+        .post(RestAssured.baseURI + "addproducttocart/details/31/1")
         .then()
         .statusCode(200)
         .body("success", is(true))
@@ -120,7 +121,7 @@ public class ServiceAPI {
         .when()
         .log().uri()
         .log().body()
-        .get("http://demowebshop.tricentis.com/logout")
+        .get(RestAssured.baseURI + "logout")
         .then()
         .statusCode(302);
   }

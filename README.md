@@ -15,7 +15,7 @@
 ![telegram-logo](https://user-images.githubusercontent.com/46926736/125160976-6585c700-e188-11eb-8eae-eb426e581d2f.png)
 ![slack-logo](https://user-images.githubusercontent.com/46926736/125160979-66b6f400-e188-11eb-98fc-721c06a4c8dd.png)
 
-Java, IntelliJ IDEA, Gradle, JUnit5, Rest-Assured, Selenide, Jenkins, Selenoid, Github, Allure Reports, Allure TestOps, Jira, Telegram (notifications), Slack (notifications)
+Java, IntelliJ IDEA, Gradle, JUnit5, Rest-Assured, Selenide, Jenkins, Selenoid, Github, Allure Reports, Allure TestOps, Jira, Telegram (уведомления), Slack (уведомления)
 
 ## Тест-план 
 Позволяет составить и сразу запустить нужный набор тестов
@@ -23,10 +23,15 @@ Java, IntelliJ IDEA, Gradle, JUnit5, Rest-Assured, Selenide, Jenkins, Selenoid, 
 
 ## Результат проведения тестирования
 Для каждого теста указаны пройденные шаги в человекочитаемом виде, а так же 
-*Скриншот браузера перед завершением прохождения теста
-*Код страницы
-*Лог консоли браузера
-*Видео прохождения теста
+
+:heavy_check_mark: Скриншот браузера перед завершением прохождения теста
+
+:heavy_check_mark: Код страницы
+
+:heavy_check_mark: Лог консоли браузера
+
+:heavy_check_mark: Видео прохождения теста
+
 Пример теста
 ![test-steps](https://user-images.githubusercontent.com/46926736/125159663-6f57fc00-e181-11eb-9bb7-c81c181abade.png)
 
@@ -45,7 +50,6 @@ Java, IntelliJ IDEA, Gradle, JUnit5, Rest-Assured, Selenide, Jenkins, Selenoid, 
 ![slack](https://user-images.githubusercontent.com/46926736/125159278-2606ad00-e17f-11eb-9de3-62d2cb229e5d.png)
 ![telegram](https://user-images.githubusercontent.com/46926736/125159286-3159d880-e17f-11eb-9fb9-ced2f844f6bb.png)
 
-
 ## По результатам проведенного тестирования можно провести анализ
 Дашборд Allure TestOps 
 Представлены графики средней продолжительности, средней успешности тестов по UI и API
@@ -55,7 +59,6 @@ Java, IntelliJ IDEA, Gradle, JUnit5, Rest-Assured, Selenide, Jenkins, Selenoid, 
 ![dashboard-team](https://user-images.githubusercontent.com/46926736/125159711-b34b0100-e181-11eb-8342-5e9d74f21ab6.png)
 
 ## Пример запуска
-
 Для удаленного запуска необходимо заполнить файл remote.properties или передать параметры в командной строке:
 
 * browser (default chrome)

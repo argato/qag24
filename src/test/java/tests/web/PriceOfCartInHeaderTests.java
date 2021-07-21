@@ -46,7 +46,7 @@ public class PriceOfCartInHeaderTests extends TestBaseUI {
 
   @Test
   @DisplayName("Отображение счетчика при добавлении первого товара")
-  @TM4J("PZ-T2")
+  @TM4J("AUTO-323")
   @Severity(SeverityLevel.NORMAL)
   void showingPriceTest() {
     String expectedItemName = "Льняное масло 250мл царевщино";

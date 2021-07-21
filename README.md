@@ -18,7 +18,7 @@
 Java, IntelliJ IDEA, Gradle, JUnit5, Rest-Assured, Selenide, Jenkins, Selenoid, Github, Allure Reports, Allure TestOps, Jira, Telegram (уведомления), Slack (уведомления)
 
 ## Тест-план 
-Позволяет составить и сразу запустить нужный набор тестов
+Allure TestOps позволяет составить и сразу запустить нужный набор тестов
 ![testplan](https://user-images.githubusercontent.com/46926736/125159293-3880e680-e17f-11eb-8132-b25bd10b3832.png)
 
 ## Результат проведения тестирования
@@ -37,6 +37,14 @@ Java, IntelliJ IDEA, Gradle, JUnit5, Rest-Assured, Selenide, Jenkins, Selenoid, 
 
 Пример записанного видео
 ![test](https://user-images.githubusercontent.com/46926736/125159635-4cc5e300-e181-11eb-9214-ceec9616ff0c.gif)
+
+## Результаты запуска экспортированы в Jira 
+
+![jira-result](https://user-images.githubusercontent.com/46926736/126556874-7e1dc7af-bff1-4d38-9d53-df096693bcac.png)
+
+В Jira так же отображаются все тест-кейсы привязанные к конкретной задаче
+
+![jira-test-cases](https://user-images.githubusercontent.com/46926736/126561849-b855b9e8-2be2-485a-bcd1-2bb4c73c6261.png)
 
 ## Список ручных и автоматизированных тестов в Allure TestOps
 Тесты можно расписывать в Allure TestOps и экспортировать в код в виде шагов. Тесты уже автоматизированные можно импортировать Allure TestOps в виде тест-кейсов.

@@ -31,7 +31,7 @@ import org.junit.jupiter.api.Test;
 @Layer("web")
 @Microservice("cart")
 @Owner("anovikova")
-@TM4J("AUTO-323")
+@TM4J("QC5-11")
 @Tags({@Tag("smoke"), @Tag("planetazdorovo")})
 public class CounterOfCartInHeaderTests extends TestBaseUI {
 

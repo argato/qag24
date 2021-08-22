@@ -1,7 +1,7 @@
 # Проект автотестов https://planetazdorovo.ru/
 
-![java](https://user-images.githubusercontent.com/46926736/125160894-01fb9980-e188-11eb-956c-4dbf77339d15.png)
 ![idea](https://user-images.githubusercontent.com/46926736/125160909-0922a780-e188-11eb-8b82-03b8d48be750.png)
+![java](https://user-images.githubusercontent.com/46926736/125160894-01fb9980-e188-11eb-956c-4dbf77339d15.png)
 ![gradle](https://user-images.githubusercontent.com/46926736/125160914-0aec6b00-e188-11eb-8d78-792dc4fda636.png)
 ![jUnit5](https://user-images.githubusercontent.com/46926736/125160917-0d4ec500-e188-11eb-9986-790638982928.png)
 ![rest-assured_logo](https://user-images.githubusercontent.com/46926736/125160921-1049b580-e188-11eb-8465-5b63fbb13d78.png)
@@ -15,7 +15,7 @@
 ![telegram-logo](https://user-images.githubusercontent.com/46926736/125160976-6585c700-e188-11eb-8eae-eb426e581d2f.png)
 ![slack-logo](https://user-images.githubusercontent.com/46926736/125160979-66b6f400-e188-11eb-98fc-721c06a4c8dd.png)
 
-Java, IntelliJ IDEA, Gradle, JUnit5, Rest-Assured, Selenide, Jenkins, Selenoid, Github, Allure Reports, Allure TestOps, Jira, Telegram (уведомления), Slack (уведомления)
+IntelliJ IDEA, Java, Gradle, JUnit5, Rest-Assured, Selenide, Jenkins, Selenoid, Github, Allure Reports, Allure TestOps, Jira, Telegram (уведомления), Slack (уведомления)
 
 ## Тест-план 
 Позволяет составить и сразу запустить нужный набор тестов

@@ -5,7 +5,6 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 
 import io.qameta.allure.restassured.AllureRestAssured;
-import io.restassured.RestAssured;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,18 +19,18 @@ public class ServiceAPI {
         .when()
         .log().uri()
         .log().body()
-        .get(RestAssured.baseURI + "cart")
+        .get("cart")
         .then()
         .statusCode(200)
         .extract()
         .body().asString();
 
     Matcher matcher = pattern.matcher(cartPage);
-    int s = 0;
+    int counterItemsInCart = 0;
     if (matcher.find()) {
-      s = Integer.parseInt(matcher.group(1));
+      counterItemsInCart = Integer.parseInt(matcher.group(1));
     }
-    return s;
+    return counterItemsInCart;
   }
 
   String getCookieAfterAPIAuth() {
@@ -43,7 +42,7 @@ public class ServiceAPI {
         .when()
         .log().uri()
         .log().body()
-        .post(RestAssured.baseURI + "login")
+        .post("login")
         .then()
         .statusCode(302)
         .log().body()
@@ -52,14 +51,14 @@ public class ServiceAPI {
         .getCookie("NOPCOMMERCE.AUTH");
   }
 
-  String getCookieNewUser() {
+  String getCookieAnonymousUser() {
     return given()
         .filter(customLogFilter().withCustomTemplates())
         .contentType("application/x-www-form-urlencoded")
         .when()
         .log().uri()
         .log().body()
-        .post(RestAssured.baseURI + "login")
+        .post("login")
         .then()
         .statusCode(200)
         .extract()
@@ -76,7 +75,7 @@ public class ServiceAPI {
         .when()
         .log().uri()
         .log().body()
-        .post(RestAssured.baseURI + "addproducttocart/details/31/1")
+        .post("addproducttocart/details/31/1")
         .then()
         .statusCode(200)
         .body("success", is(true));
@@ -92,7 +91,7 @@ public class ServiceAPI {
         .when()
         .log().uri()
         .log().body()
-        .post(RestAssured.baseURI + "addproducttocart/details/" + itemNumber + "/1")
+        .post("addproducttocart/details/" + itemNumber + "/1")
         .then()
         .statusCode(200)
         .body("success", is(true))
@@ -108,7 +107,7 @@ public class ServiceAPI {
         .when()
         .log().uri()
         .log().body()
-        .post(RestAssured.baseURI + "addproducttocart/details/31/1")
+        .post("addproducttocart/details/31/1")
         .then()
         .statusCode(200)
         .body("success", is(true))
@@ -121,7 +120,7 @@ public class ServiceAPI {
         .when()
         .log().uri()
         .log().body()
-        .get(RestAssured.baseURI + "logout")
+        .get("logout")
         .then()
         .statusCode(302);
   }

@@ -1,5 +1,6 @@
 package tests.web;
 
+import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
@@ -10,9 +11,7 @@ import allure.tag.Layer;
 import allure.tag.ManualMember;
 import allure.tag.Microservice;
 import allure.tag.TM4J;
-import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Configuration;
-import helpers.PopUpHelper;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
@@ -23,6 +22,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
+import popups.PopUp;
 
 @Feature("Поиск")
 @Story("Поиск валидных значений")
@@ -32,7 +32,7 @@ import org.junit.jupiter.api.Test;
 @Tags({@Tag("smoke"), @Tag("regress"), @Tag("planetazdorovo")})
 public class SearchTests extends TestBaseUI {
 
-  PopUpHelper popUpHelper = new PopUpHelper();
+  PopUp popUp = new PopUp();
 
   @BeforeEach
   void openPage() {
@@ -47,7 +47,7 @@ public class SearchTests extends TestBaseUI {
   @Severity(SeverityLevel.CRITICAL)
   void validStringSearchTest() {
     step("Закрыть попап выбора города", (step) -> {
-      popUpHelper.popupCityClose();
+      popUp.popupCityClose();
     });
 
     step("Поиск по строке {searchedValue}", (step) -> {
@@ -57,7 +57,7 @@ public class SearchTests extends TestBaseUI {
     });
 
     step("Проверка наличия результатов поиска", (step) -> {
-      $$(".card-list__element").shouldHave(CollectionCondition.sizeGreaterThan(0));
+      $$(".card-list__element").shouldHave(sizeGreaterThan(0));
     });
   }
 }

@@ -12,6 +12,7 @@ import allure.tag.ManualMember;
 import allure.tag.Microservice;
 import allure.tag.TM4J;
 import com.codeborne.selenide.Configuration;
+import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
@@ -24,7 +25,8 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import popups.PopUp;
 
-@Feature("Поиск")
+@Epic("Каталог")
+@Feature("Поиск товаров")
 @Story("Поиск валидных значений")
 @Layer("web")
 @Microservice("search")

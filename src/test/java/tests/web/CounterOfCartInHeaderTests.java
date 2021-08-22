@@ -15,6 +15,7 @@ import allure.tag.Microservice;
 import allure.tag.TM4J;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
@@ -27,8 +28,9 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import popups.PopUp;
 
-@Feature("Корзина")
-@Story("Отображение счетчика корзины в хедере")
+@Epic("Корзина")
+@Feature("Отображение в хедере")
+@Story("Отображение при добавлении первого товара")
 @Layer("web")
 @Microservice("cart")
 @Owner("anovikova")

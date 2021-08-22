@@ -17,7 +17,7 @@ import org.junit.jupiter.api.Test;
 
 @Epic("Корзина")
 @Feature("Счетчик корзины")
-@Story("Проверка отображения счетчика корзины")
+@Story("Проверка отображения счетчика для разных пользователей")
 @Layer("rest")
 @Microservice("cart")
 @Owner("anovikova")

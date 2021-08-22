@@ -15,6 +15,7 @@ import allure.tag.Microservice;
 import allure.tag.TM4J;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
@@ -27,8 +28,8 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import popups.PopUp;
 
-
-@Feature("Корзина")
+@Epic("Корзина")
+@Feature("Отображение стоимости")
 @Story("Отображение стоимости в корзине в хедере")
 @Layer("web")
 @Microservice("cart")
@@ -46,7 +47,7 @@ public class PriceOfCartInHeaderTests extends TestBaseUI {
   }
 
   @Test
-  @DisplayName("Отображение счетчика при добавлении первого товара")
+  @DisplayName("Отображение стоимости при добавлении первого товара")
   @TM4J("QC5-11")
   @Severity(SeverityLevel.NORMAL)
   void showingPriceTest() {
